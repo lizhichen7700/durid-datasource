@@ -17,7 +17,7 @@ import java.sql.SQLException;
  */
 @SpringBootApplication
 @Slf4j
-public class DuridDatasourceApplication implements CommandLineRunner{
+public class DruidDatasourceApplication implements CommandLineRunner{
 
 	/**
 	 * 通过DataSourceAutoConfiguration配置
@@ -38,7 +38,7 @@ public class DuridDatasourceApplication implements CommandLineRunner{
 	private DataSourceTransactionManager dataSourceTransactionManager;
 
 	public static void main(String[] args) {
-		SpringApplication.run(DuridDatasourceApplication.class, args);
+		SpringApplication.run(DruidDatasourceApplication.class, args);
 	}
 
 	@Override
