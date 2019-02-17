@@ -11,5 +11,7 @@ http://127.0.0.1:8080/actuator/info
 3.查看spring context中的beans
 http://127.0.0.1:8080/actuator/beans
 
-3.配置druid连接池
+4.配置druid连接池
+https://github.com/alibaba/druid/tree/master/druid-spring-boot-starter/
 
+http://127.0.0.1:8080/druid/login.html

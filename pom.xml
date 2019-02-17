@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.springboot</groupId>
-	<artifactId>durid-datasource</artifactId>
+	<artifactId>druid-datasource</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>durid-datasource</name>
+	<name>druid-datasource</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -27,9 +27,23 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<!-- 默认使用 HikariCP 数据源如果使用druid需要排除默认数据源 -->
+			<exclusions>
+				<exclusion>
+					<artifactId>HikariCP</artifactId>
+					<groupId>com.zaxxer</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.13</version>
 		</dependency>
 
 		<dependency>
@@ -53,6 +67,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.10</version>
 		</dependency>
 	</dependencies>
 
